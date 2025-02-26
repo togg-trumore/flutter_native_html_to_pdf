@@ -18,7 +18,7 @@ public class FlutterNativeHtmlToPdfPlugin: NSObject, FlutterPlugin {
            let htmlFilePath = args!["htmlFilePath"] as? String
            
            // !!! this is workaround for issue with rendering PDF images on iOS !!!
-           let viewControler = UIApplication.shared.delegate?.window?!.rootViewController
+           let viewControler = UIApplication.shared.delegate?.window??.rootViewController
            wkWebView = WKWebView.init(frame: viewControler!.view.bounds)
            wkWebView.isHidden = true
            wkWebView.tag = 100
